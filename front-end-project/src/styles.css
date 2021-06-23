@@ -1,1 +1,77 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+/* general font / spacing css */
+
+body{
+    display: flex;
+    background-color: lightgrey;
+}
+
+h2 {
+    font-family: inter;
+}
+
+p {
+    font-family: inter;
+}
+
+p.flag{
+    font-size: 12px;
+    color: grey;
+}
+
+p.warning{
+    font-size: 12px;
+    color: #eb7092;
+}
+
+a{
+    text-decoration: none;
+}
+
+select{
+    font-size: 15px;
+    width: 60px;
+    height: 30px;
+    color: grey;
+    margin: 10px 10px;
+}
+div{
+    background-color: white;
+}
+
+div.container {
+    border-bottom: 1px solid grey;
+    padding: 20px;
+}
+
+img {
+    height: 150px;
+    margin-right: 20px;
+}
+
+div.checkout{
+    border: 1px solid grey;
+    width: 300px;
+    height: 500px;
+    margin: 0 10px;
+}
+
+ul {
+    list-style-type: none;
+}
+/*book pic flexbox*/
+
+div.bookflex{
+    display: flex;
+}
+
+div.bookdescrip{
+    display: flex;
+    flex-flow: column;
+}
+
+div.price{
+    display: flex;
+}
