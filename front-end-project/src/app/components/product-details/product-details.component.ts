@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { Products } from '../../product';
+import { Products, Product } from '../../product';
 import { CartService } from '../../cart.service';
+import { ProviderAstType } from '@angular/compiler';
 
 @Component({
   selector: 'app-product-details',
@@ -11,10 +12,29 @@ import { CartService } from '../../cart.service';
 })
 export class ProductDetailsComponent implements OnInit {
   products = Products;
-  
-    share() {
-      window.alert('The product has been shared!');
+  name = Products.find(x => x.id === this.products.id)?.name
+
+  //determine product by name 
+
+  selectAmount(name: string, value: string) {
+    switch(value) {
+    case "0":
+      this.cartService.clearCart()
+      break;
+    case "1":
+       this.cartService.addToCart(name, 1)
+      break;
+    case "2":
+      this.cartService.addToCart(name, 2)
+      break;
+    case "3":
+      this.cartService.addToCart(name, 3)
+      break;
     }
+}
+constructor(
+  private cartService: CartService,
+  ) {}
 
   ngOnInit(): void {
   }

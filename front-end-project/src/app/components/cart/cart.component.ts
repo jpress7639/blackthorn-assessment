@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-
+import { Products } from 'src/app/product';
 import { CartService } from 'src/app/cart.service';
 
 @Component({
@@ -9,7 +9,8 @@ import { CartService } from 'src/app/cart.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-
+  product = Products;
+  
   items = this.cartService.getItems();
   checkoutForm = this.formBuilder.group({
     first: '',

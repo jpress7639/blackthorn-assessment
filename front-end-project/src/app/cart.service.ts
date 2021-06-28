@@ -1,5 +1,6 @@
+import { ThrowStmt } from '@angular/compiler';
 import { Injectable } from '@angular/core';
-import { Product } from './product';
+import { Product, cartProductList } from './product';
 
 @Injectable({
   providedIn: 'root'
@@ -7,9 +8,14 @@ import { Product } from './product';
 export class CartService {
 
     items: Product[] = [];
+    quantity= 0;
+    
+  
 
-    addToCart(product: Product) {
-      this.items.push(product);
+  addToCart(product: Product) {
+        this.items.push(product);
+        this.quantity += 1;
+        // cartProductList.quantity += number
     }
   
     getItems() {

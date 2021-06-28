@@ -1,3 +1,5 @@
+
+
 export interface Product {
     id: number;
     name: string;
@@ -29,3 +31,12 @@ export const Products: Product[] = [
         image: "https://res.cloudinary.com/dkhiieq9p/image/upload/v1624462142/Screen_Shot_2021-06-23_at_10.58.05_AM_bshihh.png",
     }
 ]
+
+export class cartProductList {
+    constructor(
+        product = Products,
+        quantity = 0,
+        price = 0
+    )
+    {}
+}

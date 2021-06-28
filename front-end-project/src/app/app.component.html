@@ -1,19 +1,25 @@
 <body>
   <div class="first">
     <div class="container">
-   
-     <app-product-details></app-product-details>
-  <h2>Donation</h2>
-  <p>Access to arts is vital. Pay what you can</p>
-  <button>$50</button>
-  <button>$100</button>
-  <button>$200</button>
-  <button>$500</button>
-  <button>$<input placeholder="Enter amount"></button>
+
+      <app-product-details></app-product-details>
+
+      <h2>Donation</h2>
+      <p>Access to arts is vital. Pay what you can</p>
+      <button class="fifty">$50</button>
+      <button class="hundred">$100</button>
+      <button class="twohundred">$200</button>
+      <button class="fivehundred">$500</button>
+      <button class="custom">$<input placeholder="Enter amount"></button>
+
     </div>
-  
+   
+
   </div>
   <div class="checkout">
-    
+
+    <h2>Order summary</h2>
+  <app-ordersummary></app-ordersummary>
   </div>
+  
 </body>
