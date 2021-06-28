@@ -8,22 +8,22 @@ import { Product, cartProductList } from './product';
 export class CartService {
 
     items: Product[] = [];
-    quantity= 0;
+    quantity = 0;
     
   
 
-  addToCart(product: Product) {
+  addToCart(product: Product, amount: number) {
         this.items.push(product);
-        this.quantity += 1;
-        // cartProductList.quantity += number
+        this.quantity = amount;
     }
   
     getItems() {
-      return this.items;
+      return this.items, this.quantity;
     }
   
     clearCart() {
       this.items = [];
+      this.quantity = 0;
       return this.items;
     }
 

@@ -10,7 +10,7 @@
         <div class="price">
             <p>${{ product.price }}</p>
 
-            <select class="select" (change)="selectAmount()" name={{product.name}} id={{product.id}}>
+            <select class="select" (change)="selectAmount(product = {{product}}, $event.target.value)">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>

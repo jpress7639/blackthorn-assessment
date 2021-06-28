@@ -10,7 +10,7 @@ import { CartService } from 'src/app/cart.service';
 })
 export class CartComponent implements OnInit {
   product = Products;
-  
+
   items = this.cartService.getItems();
   checkoutForm = this.formBuilder.group({
     first: '',
@@ -24,9 +24,6 @@ export class CartComponent implements OnInit {
 
   onSubmit(): void {
     // Process checkout data here
-    this.items = this.cartService.clearCart();
-    console.warn('Your order has been submitted', this.checkoutForm.value);
-    this.checkoutForm.reset();
   }
   ngOnInit(): void {
   }

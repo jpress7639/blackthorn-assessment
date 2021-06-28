@@ -16,19 +16,19 @@ export class ProductDetailsComponent implements OnInit {
 
   //determine product by name 
 
-  selectAmount(name: string, value: string) {
+  selectAmount(product: Product, value: string) {
     switch(value) {
     case "0":
       this.cartService.clearCart()
       break;
     case "1":
-       this.cartService.addToCart(name, 1)
+       this.cartService.addToCart(product, 1)
       break;
     case "2":
-      this.cartService.addToCart(name, 2)
+      this.cartService.addToCart(product, 2)
       break;
     case "3":
-      this.cartService.addToCart(name, 3)
+      this.cartService.addToCart(product, 3)
       break;
     }
 }
